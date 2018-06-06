@@ -11,7 +11,7 @@ case a
     i = "0x#{i}"
   else
     unless a <= 10 && i.scan(/[^0-9]/)
-	  number = i.reverse
+      number = i.reverse
       number_decimal = 0
       i.length.times do 
         |i| number_decimal += number[i].to_i*a**i
@@ -22,8 +22,7 @@ end
 
 begin
   number_decimal = Integer"#{i}"
-  0 <= number_decimal && number_decimal <= 10000 &&
-  								 1 <= a && b <= 100
+  0 <= number_decimal && number_decimal <= 10000 && 1 <= a && b <= 100
   puts number_decimal.to_s(b)
 rescue ArgumentError
   puts 'Invalid arguments !'
